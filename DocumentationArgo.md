@@ -4,3 +4,4 @@ ArgoCd Documentation
 - kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d #pass default
 - argocd login localhost:8080 #to log inside the argocdserver
 -  argocd app create app-2 --repo https://github.com/mabusaa/argocd-example-apps.git --revision master --path guestbook --dest-server https://kubernetes.default.svc --dest-namespace app-2 --sync-option CreateNamespace=true # create an app 
+- argocd proj role create-token project-with-role ci-role # create a tocken for project roles
